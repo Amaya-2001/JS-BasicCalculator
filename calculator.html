@@ -17,18 +17,54 @@
   	<div class="card-content">
     <div class="content">
 	<div class="control">
-		<input class="input  is-rounded mb-5" type="text" placeholder="Enter value 1">
-		<input class="input is-rounded mb-5" type="text" placeholder="Enter Value 2">
+		<input class="input  is-rounded mb-5" type="text" id="value 1" placeholder="Enter value 1">
+		<input class="input is-rounded mb-5"  type="text" id="value 2" placeholder="Enter Value 2">
 		<div class="buttons is-centered">
-		  <button class="button is-info">+</button>
-	  	  <button class="button is-success">-</button>
-		  <button class="button is-warning">x</button>
-		  <button class="button is-danger">/</button>
+		  <button class="button is-info" onclick="SumOfValues()">+</button>
+	  	  <button class="button is-success" onclick="SubOfValues()">-</button>
+		  <button class="button is-warning" onclick="MulitiOfValues()">x</button>
+		  <button class="button is-danger" onclick=" DivisonOfValues()">/</button>
 		</div>
-		<textarea class="textarea" placeholder="Result"></textarea>
+		<textarea class="textarea" id="answer" placeholder="Result"></textarea>
 	</div>
 	</div>
 	</div>
 	</div>
+
+<!-- javascript -->
+<script>
+	//addition
+	function SumOfValues() {
+		//console.log("click sum")
+		var value1 = parseInt(document.getElementById("value 1").value) ;
+		var value2 = parseInt(document.getElementById("value 2").value);
+		var sum = value1 + value2;
+		//console.log(sum)
+		document.getElementById("answer").value = "Answer is " + sum;
+	}
+	//substraction
+	function SubOfValues(){
+		var value1 = parseInt(document.getElementById("value 1").value) ;
+		var value2 = parseInt(document.getElementById("value 2").value);
+		var substraction = value1 - value2;
+		document.getElementById("answer").value = "Answer is " + substraction;
+	}
+	//multiplication
+	function MulitiOfValues(){
+		var value1 = parseInt(document.getElementById("value 1").value) ;
+		var value2 = parseInt(document.getElementById("value 2").value);
+		var multi = value1 * value2;
+		document.getElementById("answer").value = "Answer is " + multi;
+
+	}
+	//division
+	function DivisonOfValues(){
+		var value1 = parseInt(document.getElementById("value 1").value) ;
+		var value2 = parseInt(document.getElementById("value 2").value);
+		var division = value1 / value2;
+		document.getElementById("answer").value = "Answer is " + division;
+	}
+</script>
+
 </body>
 	</html>
